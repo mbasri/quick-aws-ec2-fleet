@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Terraform project which create VPC and Auto Scaling Group resource on AWS from scratch
+Terraform project which create VPC and Auto Scaling Group resource on AWS from scratch.
 
 ## *Create and destroy the infrastructure*
 
@@ -49,13 +49,13 @@ terraform-docs -c .terraform-docs.yml .
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 5.81.0 |
-| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | n/a |
+| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.3.7 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_autoscaling"></a> [autoscaling](#module\_autoscaling) | ../../../gitlab.com/mbasri-terraform/modules*aws/terraform-aws-autoscaling | n/a |
+| <a name="module_autoscaling"></a> [autoscaling](#module\_autoscaling) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-autoscaling | v1.0.0 |
 | <a name="module_iam-instance-profile"></a> [iam-instance-profile](#module\_iam-instance-profile) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-iam-instance-profile | v1.2.0 |
 | <a name="module_kms"></a> [kms](#module\_kms) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-kms | v1.3.0 |
 | <a name="module_security-group"></a> [security-group](#module\_security-group) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.2.0 |
