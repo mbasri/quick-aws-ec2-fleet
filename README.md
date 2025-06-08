@@ -55,16 +55,20 @@ terraform-docs -c .terraform-docs.yml .
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_alb"></a> [alb](#module\_alb) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-alb | v1.0.0 |
 | <a name="module_autoscaling"></a> [autoscaling](#module\_autoscaling) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-autoscaling | v1.0.0 |
 | <a name="module_iam-instance-profile"></a> [iam-instance-profile](#module\_iam-instance-profile) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-iam-instance-profile | v1.2.0 |
 | <a name="module_kms"></a> [kms](#module\_kms) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-kms | v1.3.0 |
-| <a name="module_security-group"></a> [security-group](#module\_security-group) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.2.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc | v1.7.1 |
+| <a name="module_security-group-alb"></a> [security-group-alb](#module\_security-group-alb) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.2.0 |
+| <a name="module_security-group-ec2"></a> [security-group-ec2](#module\_security-group-ec2) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.2.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc | v1.7.3 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
+| [aws_lb_listener_rule.this](https://registry.terraform.io/providers/hashicorp/aws/5.81.0/docs/resources/lb_listener_rule) | resource |
+| [aws_lb_target_group.this](https://registry.terraform.io/providers/hashicorp/aws/5.81.0/docs/resources/lb_target_group) | resource |
 | [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/5.81.0/docs/resources/ssm_parameter) | resource |
 | [cloudinit_config.main](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 
@@ -98,12 +102,12 @@ No inputs.
 | <a name="output_region"></a> [region](#output\_region) | The Name of the region |
 | <a name="output_secure_subnet_cidr"></a> [secure\_subnet\_cidr](#output\_secure\_subnet\_cidr) | List of cidr\_blocks of secure subnets |
 | <a name="output_secure_subnet_ids"></a> [secure\_subnet\_ids](#output\_secure\_subnet\_ids) | List of IDs of secure subnets |
-| <a name="output_security_group_arn"></a> [security\_group\_arn](#output\_security\_group\_arn) | The ARN of the security group |
-| <a name="output_security_group_description"></a> [security\_group\_description](#output\_security\_group\_description) | The description of the security group |
-| <a name="output_security_group_id"></a> [security\_group\_id](#output\_security\_group\_id) | The ID of the security group |
-| <a name="output_security_group_name"></a> [security\_group\_name](#output\_security\_group\_name) | The name of the security group |
-| <a name="output_security_group_owner_id"></a> [security\_group\_owner\_id](#output\_security\_group\_owner\_id) | The owner ID |
-| <a name="output_security_group_vpc_id"></a> [security\_group\_vpc\_id](#output\_security\_group\_vpc\_id) | The VPC ID |
+| <a name="output_security_groups_arn"></a> [security\_groups\_arn](#output\_security\_groups\_arn) | The ARN of the security group |
+| <a name="output_security_groups_description"></a> [security\_groups\_description](#output\_security\_groups\_description) | The description of the security group |
+| <a name="output_security_groups_id"></a> [security\_groups\_id](#output\_security\_groups\_id) | The ID of the security group |
+| <a name="output_security_groups_name"></a> [security\_groups\_name](#output\_security\_groups\_name) | The name of the security group |
+| <a name="output_security_groups_owner_id"></a> [security\_groups\_owner\_id](#output\_security\_groups\_owner\_id) | The owner ID |
+| <a name="output_security_groups_vpc_id"></a> [security\_groups\_vpc\_id](#output\_security\_groups\_vpc\_id) | The VPC ID |
 | <a name="output_spot_logs_cwl_id"></a> [spot\_logs\_cwl\_id](#output\_spot\_logs\_cwl\_id) | The IDs of the cloudwatch logs for Spot logging |
 | <a name="output_ssm_session"></a> [ssm\_session](#output\_ssm\_session) | Command to start ssm session |
 | <a name="output_system_logs_cwl_id"></a> [system\_logs\_cwl\_id](#output\_system\_logs\_cwl\_id) | The IDs of the cloudwatch logs for VM system logs |

@@ -102,34 +102,52 @@ output "vpc_flow_logs_cwl_id" {
 #---------------------------------------------------------------------------------------------------
 # Security Group
 #---------------------------------------------------------------------------------------------------
-output "security_group_arn" {
+output "security_groups_arn" {
   description = "The ARN of the security group"
-  value       = module.security-group.security_group_arn
+  value = {
+    "ec2" = module.security-group-ec2.security_group_arn,
+    "alb" = module.security-group-alb.security_group_arn
+  }
 }
 
-output "security_group_id" {
+output "security_groups_id" {
   description = "The ID of the security group"
-  value       = module.security-group.security_group_id
+  value = {
+    "ec2" = module.security-group-ec2.security_group_id,
+    "alb" = module.security-group-alb.security_group_id
+  }
 }
 
-output "security_group_vpc_id" {
+output "security_groups_vpc_id" {
   description = "The VPC ID"
-  value       = module.security-group.security_group_vpc_id
+  value = {
+    "ec2" = module.security-group-ec2.security_group_vpc_id,
+    "alb" = module.security-group-alb.security_group_vpc_id
+  }
 }
 
-output "security_group_owner_id" {
+output "security_groups_owner_id" {
   description = "The owner ID"
-  value       = module.security-group.security_group_owner_id
+  value = {
+    "ec2" = module.security-group-ec2.security_group_owner_id,
+    "alb" = module.security-group-alb.security_group_owner_id
+  }
 }
 
-output "security_group_name" {
+output "security_groups_name" {
   description = "The name of the security group"
-  value       = module.security-group.security_group_name
+  value = {
+    "ec2" = module.security-group-ec2.security_group_name,
+    "alb" = module.security-group-alb.security_group_name
+  }
 }
 
-output "security_group_description" {
+output "security_groups_description" {
   description = "The description of the security group"
-  value       = module.security-group.security_group_description
+  value = {
+    "ec2" = module.security-group-ec2.security_group_description,
+    "alb" = module.security-group-alb.security_group_description
+  }
 }
 
 #---------------------------------------------------------------------------------------------------

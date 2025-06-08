@@ -13,6 +13,8 @@ locals {
   iam_instance_profile_name = local.name
   autoscaling_name          = local.name
   ssm_parameter_name        = local.name
+  target_group_name         = local.name
+  alb_name                  = local.name
 
   tags = {
     "Name"        = local.name,
